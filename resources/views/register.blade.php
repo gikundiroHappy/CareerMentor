@@ -21,7 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative">
+        <div class="relative sm:bg-yellow-300 md:bg-green-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-red-300">
             @if (Route::has('login'))
                 <!-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -36,16 +36,31 @@
                 </div> -->
             @endif
 
-           <div class="grid grid-cols-3 h-screen sm:bg-yellow-300 md:bg-green-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-red-300 
-           
-           ">
+           <div class="grid grid-cols-3 h-screen">
+           <div class="col-span-1 flex bg-turtle-green justify-center items-center p-20 ">
+                <div class="text-white text-center space-y-10">
+                <h1 class="text-xl font-bold ">Welcome to our Site!</h1>
+                <p> Please enter your Registration details,
+and start journey with us.</p>
+                <button class="border border-white py-3 px-8 rounded-full">SIGN IN</button>
+                </div>
+            </div>
+
             <div class="col-span-2 flex bg-white justify-center items-center">
                 <div class="space-y-10 w-full px-40">
-                <h1 class="text-turtle-green font-bold text-xl text-center" >SIGN IN</h1>
+                <h1 class="text-turtle-green font-bold text-xl text-center" >CREATE ACCOUNT</h1>
           
                 <form method="POST" action="/process-form" class="space-y-9 w-full">
+                <input type="text" name="fname" id="fname" value="{{ old('fname') }}" placeholder="Enter your First name" 
+                   class="shadow-md w-full pl-4 py-3 border border-turle-green rounded-md"><br/>
 
-                 <input type="email" name="email" id="email" value="{{ old('email') }}" placeholder="Enter your email" 
+                   <input type="text" name="lname" id="lname" value="{{ old('lname') }}" placeholder="Enter your Last name" 
+                   class="shadow-md w-full pl-4 py-3 border border-turle-green rounded-md"><br/>
+
+                   <input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="Enter your username" 
+                   class="shadow-md w-full pl-4 py-3 border border-turle-green rounded-md"><br/>
+
+                   <input type="email" name="email" id="email" value="{{ old('email') }}" placeholder="Enter your email" 
                    class="shadow-md w-full pl-4 py-3 border border-turle-green rounded-md"><br/>
 
                    <input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Enter your password" 
@@ -55,13 +70,6 @@
                 </form>
                 </div>
             </div> 
-            <div class="col-span-1 flex bg-turtle-green justify-center items-center p-20 ">
-                <div class="text-white text-center space-y-10">
-                <h1 class="text-xl font-bold ">Welcome back!</h1>
-                <p>To keep connected with us please Sign in with your personal info.</p>
-                <button class="border border-white py-3 px-8 rounded-full">SIGN UP</button>
-                </div>
-            </div>
            </div>
         </div>
     </body>

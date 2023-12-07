@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-    @vite('resources/css/app.css')
+        @vite('resources/css/app.css')
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -21,7 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative">
+        <div class="relative 
+        
+        ">
+        <!-- sm:bg-yellow-300 md:bg-green-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-red -->
             @if (Route::has('login'))
                 <!-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -35,34 +38,77 @@
                     @endauth
                 </div> -->
             @endif
+<div class="relative mx-60 my-10 space-y-9">
+    
+<div>
+    <h1 class="text-turtle-green font-bold text-xl my-3">Who we are</h1>
+    <p>We are your career mentors, your guides on the professional journey. 
+ Led by a team of seasoned experts, we're here to help you navigate 
+ the twists and turns of your career path. Let's work together to shape 
+ your success story, one mentorship at a time. Welcome to the journey 
+ of growth, discovery, and achievement!</p>
+</div>
+<div>
+    <h1 class="text-turtle-green font-bold text-xl my-3">Our Mission</h1>
+    <p>Elevating careers through personalized mentorship, our mission is to 
+ empower individuals with confidence and skills for success. We're 
+  dedicated to guiding unique professional journeys, fostering growth, 
+  and celebrating achievements along the way. Join us on the path to 
+ your career's brightest future.</p>
+</div>
 
-           <div class="grid grid-cols-3 h-screen sm:bg-yellow-300 md:bg-green-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-red-300 
-           
-           ">
-            <div class="col-span-2 flex bg-white justify-center items-center">
-                <div class="space-y-10 w-full px-40">
-                <h1 class="text-turtle-green font-bold text-xl text-center" >SIGN IN</h1>
-          
-                <form method="POST" action="/process-form" class="space-y-9 w-full">
+<div class="space-y-">
+    <h1 class="text-turtle-green font-bold text-xl my-3">Why you should choose us</h1>
+<div>
+    <div class="flex gap-2">
+    <h1 class="">01</h1>
+    <div class="block relative bg-turtle-green bottom-0 mt-3 h-0.5 w-[840px]"></div>
 
-                 <input type="email" name="email" id="email" value="{{ old('email') }}" placeholder="Enter your email" 
-                   class="shadow-md w-full pl-4 py-3 border border-turle-green rounded-md"><br/>
+    </div>
+    <div class="grid grid-cols-2 py-7">
+        <h1 class="font-bold">Personalized Guidance</h1>
+        <p>Tailored mentorship to address 
+            your unique career challenges, 
+           ensuring a roadmap designed 
+           specifically for your success.</p>
+    </div>
+</div>
 
-                   <input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Enter your password" 
-                   class="shadow-md w-full pl-4 py-3 border border-turle-green rounded-md"><br/>
 
-                      <button type="submit" class="bg-turtle-green text-white px-8 py-2 rounded-full">SIGN IN</button>
-                </form>
-                </div>
-            </div> 
-            <div class="col-span-1 flex bg-turtle-green justify-center items-center p-20 ">
-                <div class="text-white text-center space-y-10">
-                <h1 class="text-xl font-bold ">Welcome back!</h1>
-                <p>To keep connected with us please Sign in with your personal info.</p>
-                <button class="border border-white py-3 px-8 rounded-full">SIGN UP</button>
-                </div>
-            </div>
-           </div>
-        </div>
+<div>
+    <div class="flex gap-2">
+    <h1 class="">02</h1>
+    <div class="block relative bg-turtle-green bottom-0 mt-3 h-0.5 w-[840px]"></div>
+
+     </div>
+     <div class="grid grid-cols-2 py-7">
+        <h1 class="font-bold">Proven Expertise</h1>
+        <p>Benefit from the wealth of experience 
+            our mentors bring, offering insights, 
+            strategies, and industry knowledge 
+            to accelerate your professional growth.</p>
+     </div>
+</div>
+
+<div>
+    <div class="flex gap-2">
+    <h1 class="">03</h1>
+    <div class="block relative bg-turtle-green bottom-0 mt-3 h-0.5 w-[840px]"></div>
+
+    </div>
+    <div class="grid grid-cols-2 py-7">
+        <h1 class="font-bold">Celebrating Milestones</h1>
+        <p>We're not just mentors; we're your 
+            champions. Celebrate achievements 
+            together as we guide you toward a 
+           fulfilling and successful career.</p>
+    </div>
+</div>
+
+</div>
+
+    </div>
     </body>
 </html>
+
+
